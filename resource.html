@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源中心 - 吉风羽跃</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-slider">
+    <div class="slides">
+        <div class="slide"><img src="img/1.JPG"></div>
+        <div class="slide"><img src="img/2.jpg"></div>
+        <div class="slide"><img src="img/3.jpg"></div>
+        <div class="slide"><img src="img/4.jpg"></div>
+        <div class="slide"><img src="img/5.jpg"></div>
+    </div>
+</div>
+
+<header>
+    <div class="nav-wrap">
+        <div class="logo-text" onclick="location.href='index.html'">
+            <img src="img/logo.png" class="logo-icon">吉风羽跃机器人战队
+        </div>
+        <div class="nav-menu">
+            <a href="index.html">战队简介</a>
+            <a href="award.html">获奖荣誉</a>
+            <a href="group.html">战队架构</a>
+            <a href="resource.html" class="active">资源中心</a>
+            <a href="contact.html">联系方式</a>
+        </div>
+        <button class="login-btn" id="openLogin">成员登录</button>
+    </div>
+</header>
+
+<div class="login-mask" id="loginMask">
+    <div class="login-box">
+        <div class="close-login" id="closeLogin">✕关闭</div>
+        <h3>队员账号登录</h3>
+        <div class="inp-item"><input type="text" id="userName" placeholder="输入账号"></div>
+        <div class="inp-item"><input type="password" id="pwd" placeholder="输入密码"></div>
+        <button class="sub-btn" id="loginSubmit">立即登录</button>
+    </div>
+</div>
+
+<div class="admin-box" id="adminBox">
+    <span id="adminTip"></span>
+    <button class="login-btn" id="logoutBtn">退出登录</button>
+</div>
+
+<section class="page-banner">
+    <h1 class="glow-title">资源中心</h1>
+</section>
+
+<!-- ===================== 侧边栏 + 内容布局 ===================== -->
+<div class="resource-layout">
+
+    <!-- 左侧侧边栏菜单 -->
+    <div class="resource-sidebar">
+        <div class="sidebar-menu">
+            <div class="menu-item active" data-type="all">全部资料</div>
+
+            <div class="menu-item has-child">
+                官方资料 <span class="arrow">▼</span>
+            </div>
+            <div class="sub-menu">
+                <div class="sub-item" data-type="official-game">比赛资料</div>
+                <div class="sub-item" data-type="official-mech">机械资料</div>
+                <div class="sub-item" data-type="official-elec">电控资料</div>
+                <div class="sub-item" data-type="official-vision">视觉资料</div>
+                <div class="sub-item" data-type="official-oper">运营资料</div>
+            </div>
+
+            <div class="menu-item has-child">
+                队内资料 <span class="arrow">▼</span>
+            </div>
+            <div class="sub-menu">
+                <div class="sub-item" data-type="team-mech">机械资料</div>
+                <div class="sub-item" data-type="team-elec">电控资料</div>
+                <div class="sub-item" data-type="team-vision">视觉资料</div>
+                <div class="sub-item" data-type="team-oper">运营资料</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右侧资料展示区 -->
+    <div class="resource-content">
+
+        <!-- 上传区（登录显示） -->
+        <div class="upload-section" id="uploadSection">
+            <h3>📤 资料上传</h3>
+            <form class="upload-form" id="uploadForm">
+                <div class="form-group">
+                    <label>资料类型</label>
+                    <select id="fileType">
+                        <option value="">选择分类</option>
+                        <option value="official-game">官方-比赛</option>
+                        <option value="official-mech">官方-机械</option>
+                        <option value="official-elec">官方-电控</option>
+                        <option value="official-vision">官方-视觉</option>
+                        <option value="official-oper">官方-运营</option>
+                        <option value="team-mech">队内-机械</option>
+                        <option value="team-elec">队内-电控</option>
+                        <option value="team-vision">队内-视觉</option>
+                        <option value="team-oper">队内-运营</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>文件名称</label>
+                    <input type="text" id="fileName" placeholder="例：教程.pdf">
+                </div>
+                <div class="form-group">
+                    <label>上传文件</label>
+                    <input type="file" id="fileUpload">
+                </div>
+                <button type="submit" class="upload-btn">确认上传</button>
+            </form>
+        </div>
+
+        <!-- 资料卡片列表 -->
+        <div class="resource-grid" id="resourceGrid">
+
+            <!-- 官方 - 比赛 -->
+            <div class="resource-card" data-type="official-game">
+                <h4>🏆 比赛资料</h4>
+                <ul>
+                    <li><span>RoboMaster赛事规则.pdf</span><a href="files/比赛资料/规则.pdf" class="download-btn" download>下载</a></li>
+                    <li><span>比赛流程手册.docx</span><a href="files/比赛资料/流程.pdf" class="download-btn" download>下载</a></li>
+                </ul>
+            </div>
+
+            <!-- 官方 - 机械 -->
+            <div class="resource-card" data-type="official-mech">
+                <h4>⚙ 官方机械资料</h4>
+                <ul>
+                    <li><span>SolidWorks教程.pdf</span><a href="files/机械资料/教程.pdf" class="download-btn" download>下载</a></li>
+                    <li><span>机械设计规范.docx</span><a href="files/机械资料/规范.pdf" class="download-btn" download>下载</a></li>
+                </ul>
+            </div>
+
+            <!-- 官方 - 电控 -->
+            <div class="resource-card" data-type="official-elec">
+                <h4>🔌 官方电控资料</h4>
+                <ul>
+                    <li><span>STM32开发指南.pdf</span><a href="files/电控资料/指南.pdf" class="download-btn" download>下载</a></li>
+                    <li><span>PID算法详解.pdf</span><a href="files/电控资料/PID.pdf" class="download-btn" download>下载</a></li>
+                </ul>
+            </div>
+
+            <!-- 官方 - 视觉 -->
+            <div class="resource-card" data-type="official-vision">
+                <h4>👁 官方视觉资料</h4>
+                <ul>
+                    <li><span>OpenCV文档.pdf</span><a href="files/视觉资料/OpenCV.pdf" class="download-btn" download>下载</a></li>
+                    <li><span>ROS2入门教程.pdf</span><a href="files/视觉资料/ROS2.pdf" class="download-btn" download>下载</a></li>
+                </ul>
+            </div>
+
+            <!-- 官方 - 运营 -->
+            <div class="resource-card" data-type="official-oper">
+                <h4>📷 官方运营资料</h4>
+                <ul>
+                    <li><span>宣传规范.pdf</span><a href="files/运营资料/规范.pdf" class="download-btn" download>下载</a></li>
+                    <li><span>公众号教程.docx</span><a href="files/运营资料/教程.pdf" class="download-btn" download>下载</a></li>
+                </ul>
+            </div>
+
+            <!-- 队内 - 机械 -->
+            <div class="resource-card" data-type="team-mech">
+                <h4>⚙ 队内机械资料</h4>
+                <ul>
+                    <li><span>步兵底盘设计.SLDPRT</span><a href="files/机械资料/底盘.pdf" class="download-btn" download>下载</a></li>
+                    <li><span>零部件选型手册.pdf</span><a href="files/机械资料/手册.pdf" class="download-btn" download>下载</a></li>
+                </ul>
+            </div>
+
+            <!-- 队内 - 电控 -->
+            <div class="resource-card" data-type="team-elec">
+                <h4>🔌 队内电控资料</h4>
+                <ul>
+                    <li><span>步兵底层代码.zip</span><a href="files/电控资料/代码.zip" class="download-btn" download>下载</a></li>
+                    <li><span>硬件接线图.pdf</span><a href="files/电控资料/接线图.pdf" class="download-btn" download>下载</a></li>
+                </ul>
+            </div>
+
+            <!-- 队内 - 视觉 -->
+            <div class="resource-card" data-type="team-vision">
+                <h4>👁 队内视觉资料</h4>
+                <ul>
+                    <li><span>自瞄算法源码.zip</span><a href="files/视觉资料/自瞄.zip" class="download-btn" download>下载</a></li>
+                    <li><span>导航测试报告.pdf</span><a href="files/视觉资料/报告.pdf" class="download-btn" download>下载</a></li>
+                </ul>
+            </div>
+
+            <!-- 队内 - 运营 -->
+            <div class="resource-card" data-type="team-oper">
+                <h4>📷 队内运营资料</h4>
+                <ul>
+                    <li><span>海报模板.psd</span><a href="files/运营资料/模板.psd" class="download-btn" download>下载</a></li>
+                    <li><span>文创素材.zip</span><a href="files/运营资料/素材.zip" class="download-btn" download>下载</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>©2025 吉风羽跃机器人战队 | 官网版权所有</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

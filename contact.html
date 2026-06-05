@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系方式 - 吉风羽跃</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <!-- 背景轮播容器 -->
+<div class="bg-slider">
+    <div class="slides">
+        <div class="slide"><img src="img/1.JPG" alt="背景图1"></div>
+        <div class="slide"><img src="img/2.jpg" alt="背景图2"></div>
+        <div class="slide"><img src="img/3.jpg" alt="背景图3"></div>
+        <div class="slide"><img src="img/4.jpg" alt="背景图4"></div>
+        <div class="slide"><img src="img/5.jpg" alt="背景图5"></div>
+    </div>
+</div>
+<header>
+    <div class="nav-wrap">
+        <div class="logo-text" onclick="window.location.href='index.html'">
+            <img src="img/logo.png" class="logo-icon">吉风羽跃机器人战队
+        </div>
+        <div class="nav-menu">
+            <a href="index.html">战队简介</a>
+            <a href="award.html">获奖荣誉</a>
+            <a href="group.html">战队架构</a>
+            <a href="resource.html">资源中心</a>
+            <a href="contact.html" class="active">联系方式</a>
+        </div>
+        <button class="login-btn" id="openLogin">成员登录</button>
+    </div>
+</header>
+
+<div class="login-mask" id="loginMask">
+    <div class="login-box"><div class="close-login" id="closeLogin">✕关闭</div><h3>队员账号登录</h3>
+    <div class="inp-item"><input type="text" id="userName" placeholder="输入账号"></div>
+    <div class="inp-item"><input type="password" id="pwd" placeholder="输入密码"></div>
+    <button class="sub-btn" id="loginSubmit">立即登录</button></div>
+</div>
+
+<section class="page-banner">
+    <h1 class="glow-title">联系方式</h1>
+    <!-- 招新信息（从资源中心移过来） -->
+    <div class="recruit-box">
+        <table>
+            <tr><th>组别</th><th>招聘人数</th><th>必备学习软件</th></tr>
+            <tr><td>机械组</td><td>5~6</td><td>SolidWorks、CAD、3D打印设备</td></tr>
+            <tr><td>电控组</td><td>3~4</td><td>STM32、C语言、Keil、Clion</td></tr>
+            <tr><td>视觉组</td><td>2~3</td><td>VS、Ubuntu、ROS2、C++</td></tr>
+            <tr><td>宣运组</td><td>2~3</td><td>PS、PR、剪映、秀米、PPT</td></tr>
+        </table>
+        <p class="recruit-text">招新流程：加入招新群→填写报名表→分组培训→完成日常作业→期末考核→线下见面会→正式入队。零基础可培养！</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="contact-info">
+        <p>队长QQ：3569989240</p>
+        <p>项目管理QQ：1632566830</p>
+        <p>实验室地址：新工科实验楼402智能制造学院机器人实验室</p>
+    </div>
+</section>
+
+<footer>
+    <p>©2025 吉风羽跃机器人战队 | 官网版权所有 | RoboMaster参赛团队</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

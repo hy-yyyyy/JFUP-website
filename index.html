@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>战队简介 - 吉风羽跃机器人战队</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 背景轮播容器 -->
+<div class="bg-slider">
+    <div class="slides">
+        <div class="slide"><img src="img/1.JPG" alt="背景图1"></div>
+        <div class="slide"><img src="img/2.jpg" alt="背景图2"></div>
+        <div class="slide"><img src="img/3.jpg" alt="背景图3"></div>
+        <div class="slide"><img src="img/4.jpg" alt="背景图4"></div>
+        <div class="slide"><img src="img/5.jpg" alt="背景图5"></div>
+    </div>
+</div>
+<header>
+    <div class="nav-wrap">
+        <div class="logo-text" onclick="window.location.href='index.html'">
+            <img src="img/logo.png" class="logo-icon">
+            吉风羽跃机器人战队
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="active">战队简介</a>
+            <a href="award.html">获奖荣誉</a>
+            <a href="group.html">战队架构</a>
+            <a href="resource.html">资源中心</a>
+            <a href="contact.html">联系方式</a>
+        </div>
+        <button class="login-btn" id="openLogin">成员登录</button>
+    </div>
+</header>
+
+<div class="login-mask" id="loginMask">
+    <div class="login-box">
+        <div class="close-login" id="closeLogin">✕关闭</div>
+        <h3>队员账号登录</h3>
+        <div class="inp-item">
+            <input type="text" id="userName" placeholder="输入账号">
+        </div>
+        <div class="inp-item">
+            <input type="password" id="pwd" placeholder="输入密码">
+        </div>
+        <button class="sub-btn" id="loginSubmit">立即登录</button>
+        <div class="login-desc">
+            <p>管理员：队长/项目管理/运营经理/各组组长拥有后台权限</p>
+            <p>测试账号：队长 admin 密码123456</p>
+        </div>
+    </div>
+</div>
+
+<section class="banner">
+    <h1 class="glow-title">吉风破万难，羽跃定乾坤</h1>
+    <p class="slogan">RoboMaster机甲大师参赛战队 · 智能制造学院新工科实验楼402实验室</p>
+</section>
+
+<section id="about" class="container">
+    <h2 class="sect-title">战队简介</h2>
+    <div class="about-content">
+        <p>吉风羽跃机器人战队成立于2020年，隶属于智能制造学院机器人学科实验室，基地坐落于新工科实验楼402。秉持“创新实践、协作共赢”理念，现有12名核心队员，连续五届出战全国大学生机器人大赛RoboMaster高校联盟赛，曾拿下全国一等奖。</p>
+        <br>
+        <p>自主完成机器人结构设计、硬件电控开发、AI视觉识别、SLAM建图、自动导航火控全链条研发；参赛赛事包含RoboMaster机甲大师赛、四川省机器人、西门子智能制造挑战赛、睿抗大赛、蓝桥杯人工智能等高水平学科竞赛。</p>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="sect-title">现役参赛机器</h2>
+    <div class="card-row">
+        <div class="info-card" style="width:320px;">
+            <img src="img/robot1.jpg" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+            <h4>兵种：步兵机器人</h4>
+            <p>整机重量：20kg</p>
+            <p>操作手：X同学</p>
+            <p>研发代表：岳泓洋、徐志磊、沈俊</p>
+        </div>
+        <div class="info-card" style="width:320px;">
+            <img src="img/robot2.jpg" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+            <h4>兵种：英雄机器人</h4>
+            <p>整机重量：25kg</p>
+            <p>操作手：X同学</p>
+            <p>研发代表：梁政燚、熊雨晗、沈俊、徐志磊、叶超越、刘俊杰</p>
+        </div>
+        <div class="info-card" style="width:320px;">
+            <img src="img/robot3.jpg" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
+            <h4>兵种：哨兵机器人</h4>
+            <p>整机重量：16kg</p>
+            <p>操作手：X同学</p>
+            <p>研发代表：徐志磊、刘海清、吴佳一</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>©2025 吉风羽跃机器人战队 | 官网版权所有 | RoboMaster参赛团队</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

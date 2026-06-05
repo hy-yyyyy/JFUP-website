@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>战队架构 - 吉风羽跃</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <!-- 背景轮播容器 -->
+<div class="bg-slider">
+    <div class="slides">
+        <div class="slide"><img src="img/1.JPG" alt="背景图1"></div>
+        <div class="slide"><img src="img/2.jpg" alt="背景图2"></div>
+        <div class="slide"><img src="img/3.jpg" alt="背景图3"></div>
+        <div class="slide"><img src="img/4.jpg" alt="背景图4"></div>
+        <div class="slide"><img src="img/5.jpg" alt="背景图5"></div>
+    </div>
+</div>
+<header>
+    <div class="nav-wrap">
+        <div class="logo-text" onclick="window.location.href='index.html'">
+            <img src="img/logo.png" class="logo-icon">吉风羽跃机器人战队
+        </div>
+        <div class="nav-menu">
+            <a href="index.html">战队简介</a>
+            <a href="award.html">获奖荣誉</a>
+            <a href="group.html" class="active">战队架构</a>
+            <a href="resource.html">资源中心</a>
+            <a href="contact.html">联系方式</a>
+        </div>
+        <button class="login-btn" id="openLogin">成员登录</button>
+    </div>
+</header>
+
+<div class="login-mask" id="loginMask">
+    <div class="login-box"><div class="close-login" id="closeLogin">✕关闭</div><h3>队员账号登录</h3>
+    <div class="inp-item"><input type="text" id="userName" placeholder="输入账号"></div>
+    <div class="inp-item"><input type="password" id="pwd" placeholder="输入密码"></div>
+    <button class="sub-btn" id="loginSubmit">立即登录</button></div>
+</div>
+
+<!-- ====================== 战队核心成员板块 ====================== -->
+<div class="team-core-section" style="margin: 60px 0 40px;">
+  <h2 class="glow-title" style="text-align: center; margin-bottom: 30px;">战队核心成员</h2>
+  
+  <!-- 核心管理层：三行三列 → 队长独占第一行 -->
+  <div class="core-grid">
+    <!-- 第一行：队长 独占整行 -->
+    <div class="member-card captain-full">
+      <img src="img/duizhang.jpg" alt="队长">
+      <h3>同花顺</h3>
+      <p class="post">队长</p>
+      <p>入队时间：2025年11月</p>
+      <p>赛龄：1年</p>
+      <p>称号：视觉第一代传人</p>
+      <p>职务：战队管理</p>
+    </div>
+
+    <!-- 第二行：副队、项目管理、运营经理 -->
+    <div class="member-card">
+      <img src="img/fudui.jpg" alt="副队">
+      <h3>人机9号</h3>
+      <p class="post">副队长</p>
+      <p>入队时间：2024年10月</p>
+      <p>赛龄：2.5年</p>
+      <p>称号：JFUP视觉开山老登</p>
+      <p>职务：协助队长、日常管理、视觉技术深度开发</p>
+    </div>
+    <div class="member-card">
+      <img src="img/xiangguan.jpg" alt="项目管理">
+      <h3>濯枝雨</h3>
+      <p class="post">项目管理</p>
+      <p>入队时间：2025年11月</p>
+      <p>赛龄：1年</p>
+      <p>称号：机械神之一手</p>
+      <p>职务：哪有需要往哪搬，暂负责英雄底盘设计</p>
+    </div>
+    <div class="member-card">
+      <img src="images/manager.jpg" alt="运营经理">
+      <h3>赵六</h3>
+      <p class="post">运营经理</p>
+      <p>入队时间：2023.02</p>
+      <p>赛龄：2年</p>
+      <p>称号：战队运营官</p>
+      <p>职务：宣传、活动、外联</p>
+    </div>
+
+    <!-- 第三行：机械组长、电控组长、视觉组长 -->
+    <div class="member-card">
+      <img src="img/jixie.jpg" alt="机械组长">
+      <h3>Qing</h3>
+      <p class="post">机械组长</p>
+      <p>入队时间：2025年11月</p>
+      <p>赛龄：1年</p>
+      <p>称号：零部件失踪搜救者</p>
+      <p>职务：统筹机甲设计制造</p>
+    </div>
+    <div class="member-card">
+      <img src="img/diankong.jpg" alt="电控组长">
+      <h3>jlgl</h3>
+      <p class="post">电控组长</p>
+      <p>入队时间：2025年11月</p>
+      <p>赛龄：1年</p>
+      <p>称号：视觉的手，机械的脑</p>
+      <p>职务：步兵，英雄代码编写，以及与视觉组自瞄，导航合作</p>
+    </div>
+    <div class="member-card">
+      <img src="img/shijue.jpg" alt="视觉组长">
+      <h3>打哪指哪</h3>
+      <p class="post">视觉组长</p>
+      <p>入队时间：2025年11月</p>
+      <p>赛龄：1年</p>
+      <p>称号：自瞄导航一体机（半年保修版）</p>
+      <p>职务：负责战队自瞄和导航的开发（目前导航不认路，自瞄偶尔认人）</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== 各组详细成员（可展开隐藏） ====================== -->
+<div class="group-members-container">
+  <!-- 机械组成员 -->
+  <div class="group-member-box">
+    <div class="group-header">
+      <h3>机械组成员</h3>
+      <button class="show-more-btn" onclick="toggleGroup('mech')">更多 +</button>
+    </div>
+    <div id="mech-list" class="group-member-list hidden">
+      <div class="member-card small"><img src="images/m1.jpg"><h3>成员1</h3><p>队员</p></div>
+      <div class="member-card small"><img src="images/m2.jpg"><h3>成员2</h3><p>队员</p></div>
+    </div>
+  </div>
+
+  <!-- 电控组成员 -->
+  <div class="group-member-box">
+    <div class="group-header">
+      <h3>电控组成员</h3>
+      <button class="show-more-btn" onclick="toggleGroup('elec')">更多 +</button>
+    </div>
+    <div id="elec-list" class="group-member-list hidden">
+      <div class="member-card small"><img src="images/e1.jpg"><h3>成员1</h3><p>队员</p></div>
+      <div class="member-card small"><img src="images/e2.jpg"><h3>成员2</h3><p>队员</p></div>
+    </div>
+  </div>
+
+  <!-- 视觉组成员 -->
+  <div class="group-member-box">
+    <div class="group-header">
+      <h3>视觉组成员</h3>
+      <button class="show-more-btn" onclick="toggleGroup('vision')">更多 +</button>
+    </div>
+    <div id="vision-list" class="group-member-list hidden">
+      <div class="member-card small"><img src="images/v1.jpg"><h3>成员1</h3><p>队员</p></div>
+      <div class="member-card small"><img src="images/v2.jpg"><h3>成员2</h3><p>队员</p></div>
+    </div>
+  </div>
+
+  <!-- 运营组成员 -->
+  <div class="group-member-box">
+    <div class="group-header">
+      <h3>运营组成员</h3>
+      <button class="show-more-btn" onclick="toggleGroup('oper')">更多 +</button>
+    </div>
+    <div id="oper-list" class="group-member-list hidden">
+      <div class="member-card small"><img src="images/o1.jpg"><h3>成员1</h3><p>队员</p></div>
+      <div class="member-card small"><img src="images/o2.jpg"><h3>成员2</h3><p>队员</p></div>
+    </div>
+  </div>
+</div>
+
+<section class="page-banner">
+    <h1 class="glow-title">组别介绍</h1>
+</section>
+
+<section class="container">
+    <div class="groups-vertical-container">
+        <div class="info-card"><h4>⚙机械组</h4><p>使用SolidWorks/CAD建模，3D打印、车床铣床加工，整机结构轻量化设计，机械零部件选型装配。</p></div>
+        <div class="info-card"><h4>🔌电控组</h4><p>STM32、C语言、PID控制、电机驱动与传感器调试，底层代码开发。</p></div>
+        <div class="info-card"><h4>👁视觉组</h4><p>C++、Ubuntu、ROS2、OpenCV目标识别、AI自动火控、激光雷达SLAM。</p></div>
+        <div class="info-card"><h4>📷宣运组</h4><p>PS/PR/剪映、公众号运营、海报设计、赛事拍摄、战队周边文创。</p></div>
+    </div>
+</section>
+
+<footer>
+    <p>©2025 吉风羽跃机器人战队 | 官网版权所有 | RoboMaster参赛团队</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
